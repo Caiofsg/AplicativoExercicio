@@ -5,7 +5,6 @@ public class Routine {
     private int week, time;
     private float initial, meta;
     private User person;
-    private Exercise v[], em[];
     private String objective;
     
     //Constructor
@@ -55,14 +54,6 @@ public class Routine {
         this.person = person;
     }
 
-    public Exercise[] getV() {
-        return v;
-    }
-
-    public void setV(Exercise[] v) {
-        this.v = v;
-    }
-
     public String getObjective() {
         return objective;
     }
@@ -71,8 +62,11 @@ public class Routine {
         this.objective = objective;
     }
     
-    //Métodos Manipuladores
+    //Manipulação de Variáveis Globais
+    public static Exercise v[] = new Exercise[5]; 
+    public static Exercise em[] = new Exercise [5];
     
+    //Métodos Manipuladores
     public void montarRoutine(){
         this.getObjective();
         if(this.objective == "Emagrecer"){
